@@ -6,6 +6,7 @@
 
 import Foundation
 import UIKit
+import UniformTypeIdentifiers
 
 enum SettingsPickerType{
     case backup
@@ -217,7 +218,7 @@ class SettingsViewController: ScrollViewController, UIDocumentPickerDelegate, UI
     }
     
     @objc func restoreData(){
-        let filePicker = UIDocumentPickerViewController(documentTypes: ["com.pkware.zip-archive"], in: .open)
+        let filePicker = UIDocumentPickerViewController(forOpeningContentTypes: [.zip])
         filePicker.allowsMultipleSelection = false
         filePicker.directoryURL = FileController.backupDirURL
         filePicker.delegate = self

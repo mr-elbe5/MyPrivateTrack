@@ -14,7 +14,7 @@ class MainTabController: UITabBarController {
     
     static var instance : MainTabController{
         get{
-            return UIApplication.shared.windows.first!.rootViewController as! MainTabController
+            return UIApplication.shared.firstKeyWindow!.rootViewController as! MainTabController
         }
     }
     

@@ -43,6 +43,7 @@
 		4E8BD84C27AC074E005C072A /* CreateQuickEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BD84A27AC074E005C072A /* CreateQuickEntryView.swift */; };
 		4E8BD84D27AC074E005C072A /* TimelineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8BD84B27AC074E005C072A /* TimelineHeaderView.swift */; };
 		4E90CA70249532EB0029E308 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E90CA72249532EB0029E308 /* Localizable.strings */; };
+		4EAE0D162DB23E81004CF6B1 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAE0D152DB23E81004CF6B1 /* UIApplication.swift */; };
 		4EC6847927C0E71500215524 /* AudioSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC6847827C0E71500215524 /* AudioSession.swift */; };
 		4EC869AE27A14E74000F0583 /* SwitchIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC869AD27A14E74000F0583 /* SwitchIcon.swift */; };
 		4ED21B7924FAA17200A6FEA3 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED21B7724FAA17200A6FEA3 /* DataController.swift */; };
@@ -154,6 +155,7 @@
 		4E8BD84B27AC074E005C072A /* TimelineHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineHeaderView.swift; sourceTree = "<group>"; };
 		4E90CA71249532EB0029E308 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4E90CA73249533080029E308 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4EAE0D152DB23E81004CF6B1 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		4EC6847827C0E71500215524 /* AudioSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSession.swift; sourceTree = "<group>"; };
 		4EC869AD27A14E74000F0583 /* SwitchIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchIcon.swift; sourceTree = "<group>"; };
 		4ED21B7724FAA17200A6FEA3 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
@@ -397,6 +399,7 @@
 				4E4F41E027AFD5320068D241 /* PreviewContainer.swift */,
 				4E4F41E227B3EADF0068D241 /* UIViewController+MediaDelegate.swift */,
 				4EF4DB5627BEB84300D78CDB /* VolumeSlider.swift */,
+				4EAE0D152DB23E81004CF6B1 /* UIApplication.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -480,8 +483,9 @@
 		4EFDFF2C24952F53001EB7C3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1630;
 				ORGANIZATIONNAME = "Michael Rönnau";
 				TargetAttributes = {
 					4EFDFF3324952F53001EB7C3 = {
@@ -628,6 +632,7 @@
 				4ED21BCC24FAA36C00A6FEA3 /* SceneDelegate.swift in Sources */,
 				4E3AA22827A695CF00ED14A2 /* UIImage.swift in Sources */,
 				4ED21BB324FAA32500A6FEA3 /* VideoItemData.swift in Sources */,
+				4EAE0D162DB23E81004CF6B1 /* UIApplication.swift in Sources */,
 				4ED21C4B24FAAC6E00A6FEA3 /* AVCaptureDevice.swift in Sources */,
 				4E0018B027B6831A005AA1A3 /* ImageItemView.swift in Sources */,
 				4E3AA23027A695CF00ED14A2 /* UIView.swift in Sources */,
@@ -704,8 +709,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 5UG99476V8;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -766,8 +773,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 5UG99476V8;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -793,13 +802,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 31;
-				DEVELOPMENT_TEAM = 5UG99476V8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = myprivatetrack/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -820,13 +828,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 31;
-				DEVELOPMENT_TEAM = 5UG99476V8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = myprivatetrack/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

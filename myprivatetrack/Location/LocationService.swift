@@ -33,7 +33,7 @@ class LocationService : NSObject, CLLocationManagerDelegate{
     
     var authorized : Bool{
         get{
-            switch CLLocationManager.authorizationStatus(){
+            switch locationManager.authorizationStatus{
             case .authorizedAlways:
                 return true
             case.authorizedWhenInUse:

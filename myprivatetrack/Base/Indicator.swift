@@ -20,7 +20,7 @@ class Indicator{
     }
 
     func show() {
-            let window = UIApplication.shared.windows.first!
+        let window = UIApplication.shared.firstKeyWindow!
             indicatorView.frame = CGRect(x:0, y:0, width:80, height:80)
         indicatorView.center = CGPoint(x: window.frame.width / 2.0, y: window.frame.height / 2.0)
         indicatorView.backgroundColor = .white

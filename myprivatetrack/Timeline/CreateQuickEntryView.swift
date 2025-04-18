@@ -35,7 +35,7 @@ class CreateQuickEntryView: UIView{
         textView.setAnchors(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, insets: .zero)
         
         saveButton.layer.cornerRadius = 15
-        saveButton.contentEdgeInsets = UIEdgeInsets(top: 5.0, left: 5.0, bottom: 5.0, right: 5.0)
+        saveButton.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 5.0, leading: 5.0, bottom: 5.0, trailing: 5.0)
         saveButton.addTarget(self, action: #selector(saveEntry), for: .touchDown)
         addSubview(saveButton)
         saveButton.setAnchors(leading: textView.trailingAnchor, trailing: trailingAnchor, insets: .zero)
